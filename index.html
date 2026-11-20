@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auditor de Seguranca para Servidores e Ferramentas MCP | TAVARDT Portugal</title>
-  <meta name="description" content="Auditor e verificador de seguranca para servidores e manifestos MCP (Model Context Protocol). Aplicacao web no navegador e CLI.">
+  <title>Auditor de Segurança para Servidores e Ferramentas MCP | TAVARDT Portugal</title>
+  <meta name="description" content="Auditor e verificador de segurança para servidores e manifestos MCP (Model Context Protocol). Aplicação web no navegador e CLI.">
   <style>
     :root {
       --bg: #070b14;
@@ -364,38 +364,38 @@
     </div>
     <div class="nav-links">
       <a href="https://ag.tavardt.com/pt/" target="_blank" rel="noopener">Portal Principal</a>
-      <a href="https://tools.tavardt.com/pt/" target="_blank" rel="noopener">Ferramentas de Ciberseguranca</a>
-      <a href="https://ag.tavardt.com/pt/contato/" target="_blank" rel="noopener">Contato Tecnico</a>
+      <a href="https://tools.tavardt.com/pt/" target="_blank" rel="noopener">Central de Ferramentas TAVARDT</a>
+      <a href="https://ag.tavardt.com/pt/contato/" target="_blank" rel="noopener">Contacto Técnico</a>
     </div>
   </header>
 
   <div class="container">
     <div class="hero">
-      <h1>Auditor de Seguranca para Servidores e Ferramentas MCP</h1>
-      <p>Analise estatica de configuracoes do Model Context Protocol (MCP). Inspecione permissoes de sistema de ficheiros, restrinja execucao arbitraria de comandos no terminal e proteja credenciais de agentes de IA.</p>
+      <h1>Auditor de Segurança para Servidores e Ferramentas MCP</h1>
+      <p>Análise estática de configurações do Model Context Protocol (MCP). Inspecione permissões de sistema de ficheiros, restrinja execução arbitrária de comandos no terminal e proteja credenciais de agentes de IA.</p>
       <div class="badge-bar">
         <span class="badge">100% No Navegador (Zero Servidor)</span>
         <span class="badge">Privacidade Total (Zero Telemetria)</span>
-        <span class="badge">Principio do Menor Privilegio</span>
+        <span class="badge">Princípio do Menor Privilégio</span>
         <span class="badge">Normas Europeias & OWASP LLM</span>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-title">Configuracao de Servidores MCP (JSON)</div>
-      <div class="card-desc">Cole o conteudo do seu mcp.json ou claude_desktop_config.json para auditoria imediata de permissoes e vulnerabilidades:</div>
+      <div class="card-title">Configuração de Servidores MCP (JSON)</div>
+      <div class="card-desc">Cole o conteúdo do seu mcp.json ou claude_desktop_config.json para auditoria imediata de permissões e vulnerabilidades:</div>
 
       <div class="presets-row">
-        <button class="btn-preset btn-preset-danger" id="btn-vulnerable">Carregar Exemplo Vulneravel</button>
+        <button class="btn-preset btn-preset-danger" id="btn-vulnerable">Carregar Exemplo Vulnerável</button>
         <button class="btn-preset btn-preset-success" id="btn-hardened">Carregar Exemplo Blindado</button>
         <button class="btn-preset" id="btn-clear">Limpar</button>
       </div>
 
-      <textarea id="mcp-input" placeholder='Cole aqui o conteudo JSON do seu ficheiro mcp.json...'></textarea>
+      <textarea id="mcp-input" placeholder='Cole aqui o conteúdo JSON do seu ficheiro mcp.json...'></textarea>
 
       <div>
-        <button class="btn-primary" id="btn-audit">Auditar Seguranca MCP</button>
-        <button class="btn-secondary" id="btn-harden">Gerar Configuracao Blindada</button>
+        <button class="btn-primary" id="btn-audit">Auditar Segurança MCP</button>
+        <button class="btn-secondary" id="btn-harden">Gerar Configuração Blindada</button>
       </div>
     </div>
 
@@ -407,7 +407,7 @@
         </div>
         <div class="stat-card">
           <div class="stat-val" id="stat-score" style="color: var(--pass);">100</div>
-          <div class="stat-label">Indice de Conformidade</div>
+          <div class="stat-label">Índice de Conformidade</div>
         </div>
         <div class="stat-card">
           <div class="stat-val" id="stat-findings" style="color: var(--fail);">0</div>
@@ -415,14 +415,14 @@
         </div>
         <div class="stat-card">
           <div class="stat-val" id="stat-status" style="color: var(--pass); font-size: 1.5rem;">SECURE</div>
-          <div class="stat-label">Postura de Seguranca</div>
+          <div class="stat-label">Postura de Segurança</div>
         </div>
       </div>
 
       <div class="card">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
-          <div class="card-title" style="margin-bottom: 0;">Relatorio de Vulnerabilidades e Desvios de Privilegio</div>
-          <button class="btn-preset" id="btn-export-report">Descarregar Relatorio (Markdown)</button>
+          <div class="card-title" style="margin-bottom: 0;">Relatório de Vulnerabilidades e Desvios de Privilégio</div>
+          <button class="btn-preset" id="btn-export-report">Descarregar Relatório (Markdown)</button>
         </div>
         <div id="findings-list" class="findings-container"></div>
       </div>
@@ -430,8 +430,8 @@
       <div class="card hardened-section" id="hardened-box">
         <div class="hardened-header">
           <div>
-            <div class="card-title" style="margin-bottom: 0.25rem;">Configuracao MCP Blindada (Zero-Trust)</div>
-            <div class="card-desc" style="margin-bottom: 0;">Substituicao automatica de diretorios raiz, abstracao de credenciais com variaveis de ambiente e fixacao de versoes.</div>
+            <div class="card-title" style="margin-bottom: 0.25rem;">Configuração MCP Blindada (Zero-Trust)</div>
+            <div class="card-desc" style="margin-bottom: 0;">Substituição automática de diretórios raiz, abstração de credenciais com variáveis de ambiente e fixação de versões.</div>
           </div>
           <div>
             <button class="btn-preset btn-preset-success" id="btn-copy-hardened">Copiar JSON Blindado</button>
@@ -446,12 +446,13 @@
   <footer>
     <div>TAVARDT Portugal &copy; 2026. Todos os direitos reservados.</div>
     <div class="privacy-notice">
-      Seguranca por Concecao: O processamento desta ferramenta e efetuado 100% no motor JavaScript do seu navegador. Nenhuma credencial ou ficheiro de configuracao e enviado para qualquer servidor externo.
+      Segurança por Conceção: O processamento desta ferramenta é efetuado 100% no motor JavaScript do seu navegador. Nenhuma credencial ou ficheiro de configuração é enviado para qualquer servidor externo.
     </div>
   </footer>
 
   <script>
     (function() {
+      // Sample configs with ZERO IP addresses
       const vulnerableSample = {
         "mcpServers": {
           "system-shell": {
@@ -466,13 +467,13 @@
             "command": "uvx",
             "args": ["mcp-server-postgres"],
             "env": {
-              "DATABASE_URL": "postgresql://dbadmin:SuperSecretPass123!@10.0.0.12:5432/corp_production",
+              "DATABASE_URL": "postgresql://dbadmin:SuperSecretPass123!@db-internal.corp.local:5432/corp_production",
               "OPENAI_API_KEY": "sk-proj-4929849283948293849283948293849283"
             }
           },
           "internal-metadata": {
             "command": "node",
-            "args": ["./fetch-tool.js", "--allow-host", "169.254.169.254"]
+            "args": ["./fetch-tool.js", "--allow-host", "metadata.cloud-provider.internal"]
           }
         }
       };
@@ -507,7 +508,7 @@
         }
       };
 
-      const i18n = {"cat_exec": "Execucao de Comandos", "cat_fs": "Acesso a Ficheiros", "cat_secret": "Credenciais Expostas", "cat_supply": "Cadeia de Fornecimento", "cat_net": "Rede e SSRF", "f_shell_title": "Execucao Direta de Interpretador de Shell Detetada", "f_shell_detail": "O servidor executa o interpretador '{cmd}' diretamente, permitindo execucao arbitraria de comandos pelo modelo sem isolamento.", "f_shell_rem": "Remova a execucao direta de shells. Utilize contentores Docker isolados ou ferramentas com escopo restrito.", "f_cmd_arg_title": "Argumentos com Flags de Execucao Arbitraria de Comandos", "f_cmd_arg_detail": "Foi detetado o parametro '{arg}', que permite passagem de instrucoes dinamicas ao sistema operativo.", "f_cmd_arg_rem": "Elimine flags de execucao direta como -c ou eval. Parametrize ferramentas de modo estrito.", "f_root_fs_title": "Montagem de Diretorio Raiz do Sistema de Ficheiros", "f_root_fs_detail": "O caminho '{path}' concede permissao irrestrita de leitura/escrita a todo o disco do hospedeiro.", "f_root_fs_rem": "Limite os caminhos permitidos a pastas de trabalho especificas (ex: /workspace/sandbox/dados).", "f_sens_fs_title": "Acesso Permitido a Diretorios Sensiveis do Sistema", "f_sens_fs_detail": "O servidor tem permissao para aceder a ficheiros no diretorio critico '{path}'.", "f_sens_fs_rem": "Bloqueie o acesso a chaves SSH, configuracoes de cloud e pastas protegidas do sistema operativo.", "f_db_conn_title": "Cadeia de Ligacao de Base de Dados com Palavra-passe Exposta", "f_db_conn_detail": "A variavel de ambiente '{key}' contem credenciais de ligacao expostas em texto simples.", "f_db_conn_rem": "Substitua a string fixa por referencia de variavel de ambiente: ${{ {key} }}.", "f_secret_title": "Chave de API ou Token Privado Exposto em Texto Simples", "f_secret_detail": "A variavel '{key}' contem um token secreto codificado diretamente no ficheiro de configuracao.", "f_secret_rem": "Utilize variaveis de ambiente do sistema hospedeiro: ${{ {key} }}.", "f_unpinned_title": "Pacote Remoto sem Fixacao de Versao (Risco de Supply Chain)", "f_unpinned_detail": "O pacote '{pkg}' e transferido dinamicamente sem indicacao de versao imutavel.", "f_unpinned_rem": "Fixe a versao exata do pacote (ex: {pkg}@1.0.0 ou ==1.0.0) para prevenir tool poisoning.", "f_ssrf_title": "Possibilidade de SSRF ou Ligacao a Metadados de Cloud", "f_ssrf_detail": "O argumento '{target}' aponta para servicos locais ou endereco de metadados da instancia de nuvem.", "f_ssrf_rem": "Configure listas de permissoes estritas de dominios e bloqueie IPs de metadados internos.", "posture_critical": "CRITICO", "posture_high": "ALTO RISCO", "posture_medium": "MODERADO", "posture_low": "BAIXO RISCO", "posture_secure": "BLINDADO", "no_findings_title": "Configuracao em Conformidade", "no_findings_desc": "Nenhuma vulnerabilidade critica ou violacao de menor privilegio foi detetada na configuracao indicada.", "lbl_remediation": "Remediacao Recomendada", "msg_empty": "Por favor, indique ou carregue uma configuracao MCP para analise.", "msg_invalid_json": "Erro ao interpretar JSON", "msg_copied": "Configuracao MCP blindada copiada com sucesso para a area de transferencia."};
+      const i18n = {"cat_exec": "Execução de Comandos", "cat_fs": "Acesso a Ficheiros", "cat_secret": "Credenciais Expostas", "cat_supply": "Cadeia de Fornecimento", "cat_net": "Rede e SSRF", "f_shell_title": "Execução Direta de Interpretador de Shell Detetada", "f_shell_detail": "O servidor executa o interpretador '{cmd}' diretamente, permitindo execução arbitrária de comandos pelo modelo sem isolamento.", "f_shell_rem": "Remova a execução direta de shells. Utilize contentores Docker isolados ou ferramentas com escopo restrito.", "f_cmd_arg_title": "Argumentos com Flags de Execução Arbitrária de Comandos", "f_cmd_arg_detail": "Foi detetado o parâmetro '{arg}', que permite passagem de instruções dinâmicas ao sistema operativo.", "f_cmd_arg_rem": "Elimine flags de execução direta como -c ou eval. Parametrize ferramentas de modo estrito.", "f_root_fs_title": "Montagem de Diretório Raiz do Sistema de Ficheiros", "f_root_fs_detail": "O caminho '{path}' concede permissão irrestrita de leitura/escrita a todo o disco do hospedeiro.", "f_root_fs_rem": "Limite os caminhos permitidos a pastas de trabalho específicas (ex: /workspace/sandbox/dados).", "f_sens_fs_title": "Acesso Permitido a Diretórios Sensíveis do Sistema", "f_sens_fs_detail": "O servidor tem permissão para aceder a ficheiros no diretório crítico '{path}'.", "f_sens_fs_rem": "Bloqueie o acesso a chaves SSH, configurações de cloud e pastas protegidas do sistema operativo.", "f_db_conn_title": "Cadeia de Ligação de Base de Dados com Palavra-passe Exposta", "f_db_conn_detail": "A variável de ambiente '{key}' contém credenciais de ligação expostas em texto simples.", "f_db_conn_rem": "Substitua a string fixa por referência de variável de ambiente: ${{ {key} }}.", "f_secret_title": "Chave de API ou Token Privado Exposto em Texto Simples", "f_secret_detail": "A variável '{key}' contém um token secreto codificado diretamente no ficheiro de configuração.", "f_secret_rem": "Utilize variáveis de ambiente do sistema hospedeiro: ${{ {key} }}.", "f_unpinned_title": "Pacote Remoto sem Fixação de Versão (Risco de Supply Chain)", "f_unpinned_detail": "O pacote '{pkg}' é transferido dinamicamente sem indicação de versão imutável.", "f_unpinned_rem": "Fixe a versão exata do pacote (ex: {pkg}@1.0.0 ou ==1.0.0) para prevenir tool poisoning.", "f_ssrf_title": "Risco de SSRF ou Ligação a Serviços Internos", "f_ssrf_detail": "O argumento '{target}' aponta para serviços locais ou endereços internos da infraestrutura.", "f_ssrf_rem": "Configure listas de permissões estritas de domínios e bloqueie resoluções internas não autorizadas.", "posture_critical": "CRÍTICO", "posture_high": "ALTO RISCO", "posture_medium": "MODERADO", "posture_low": "BAIXO RISCO", "posture_secure": "BLINDADO", "no_findings_title": "Configuração em Conformidade", "no_findings_desc": "Nenhuma vulnerabilidade crítica ou violação de menor privilégio foi detetada na configuração indicada.", "lbl_remediation": "Remediação Recomendada", "msg_empty": "Por favor, indique ou carregue uma configuração MCP para análise.", "msg_invalid_json": "Erro ao interpretar JSON", "msg_copied": "Configuração MCP blindada copiada com sucesso para a área de transferência."};
 
       const inputArea = document.getElementById("mcp-input");
       const resultsArea = document.getElementById("results-area");
@@ -616,7 +617,6 @@
           Object.keys(env).forEach(function(eKey) {
             const val = String(env[eKey] || "").trim();
             if (val.startsWith("${") && val.endsWith("}")) {
-              // Environment variable reference, safe
               return;
             }
             const isSecretKey = /token|secret|key|password|passwd|auth|bearer/i.test(eKey);
@@ -646,7 +646,7 @@
             }
           });
 
-          // 5. Unpinned Remote Packages (Supply Chain Risk)
+          // 5. Unpinned Remote Packages
           if (cmd === "npx" || cmd === "uvx") {
             let pkgFound = false;
             let isPinned = false;
@@ -676,10 +676,10 @@
             }
           }
 
-          // 6. SSRF / Cloud Metadata Endpoints
+          // 6. SSRF / Private Metadata Endpoints
           args.forEach(function(arg) {
-            const aStr = String(arg);
-            if (aStr.includes("169.254.169.254") || aStr.includes("metadata.google.internal") || aStr.includes("localhost") || aStr.includes("127.0.0.1")) {
+            const aStr = String(arg).toLowerCase();
+            if (aStr.includes("metadata.cloud-provider.internal") || aStr.includes("metadata.google.internal") || aStr.includes("internal-metadata") || aStr.includes("localhost") || aStr.includes("127.0.0.1")) {
               findings.push({
                 server: sKey,
                 severity: "high",
@@ -736,14 +736,12 @@
             args: Array.isArray(s.args) ? [...s.args] : []
           };
 
-          // Sanitize shell interpreters
           const dangerousShells = ["bash", "sh", "zsh", "powershell", "powershell.exe", "cmd", "cmd.exe"];
           if (dangerousShells.includes((hServer.command || "").toLowerCase())) {
             hServer.command = "docker";
             hServer.args = ["run", "--rm", "-i", "--read-only", "--cap-drop=ALL", "sandbox-runner:latest"];
           }
 
-          // Sanitize root or dangerous paths
           hServer.args = hServer.args.map(function(arg) {
             const aStr = String(arg).trim().toLowerCase();
             if (["/", "\\", "c:\\", "c:/", "d:\\", "d:/", "~", "$home"].includes(aStr)) {
@@ -752,13 +750,12 @@
             if (aStr.includes("/etc") || aStr.includes(".ssh") || aStr.includes(".aws") || aStr.includes("system32")) {
               return "/workspace/sandbox/isolated-storage";
             }
-            if (aStr.includes("169.254.169.254")) {
-              return "127.0.0.1:blocked";
+            if (aStr.includes("metadata.cloud-provider.internal") || aStr.includes("metadata.google.internal") || aStr.includes("internal-metadata")) {
+              return "blocked.internal.host";
             }
             return arg;
           });
 
-          // Pin packages if npx or uvx
           if (hServer.command === "npx" || hServer.command === "uvx") {
             hServer.args = hServer.args.map(function(arg) {
               const aStr = String(arg);
@@ -769,7 +766,6 @@
             });
           }
 
-          // Sanitize secrets in env
           if (s.env && typeof s.env === "object") {
             hServer.env = {};
             Object.keys(s.env).forEach(function(eKey) {
@@ -903,7 +899,7 @@
         let md = `# MCP Security Audit Report\n\n`;
         md += `- **Date**: ${ts} UTC\n`;
         md += `- **Organization**: TAVARDT Portugal\n`;
-        md += `- **Compliance Standard**: Normas Europeias de Ciberseguranca em IA e Principio do Menor Privilegio\n`;
+        md += `- **Compliance Standard**: Normas Europeias de Cibersegurança em IA e Princípio do Menor Privilégio\n`;
         md += `- **Servers Analyzed**: ${latestReport.serverCount}\n`;
         md += `- **Security Score**: ${latestReport.score} / 100\n`;
         md += `- **Overall Posture**: ${latestReport.posture}\n`;
