@@ -78,7 +78,7 @@ jobs:
 ## Portais Institucionais TAVARDT
 
 - **Portal Principal**: [https://ag.tavardt.com/pt/](https://ag.tavardt.com/pt/)
-- **Central de Ferramentas TAVARDT**: [https://tools.tavardt.com/pt/](https://tools.tavardt.com/pt/)
+- **Central de Ferramentas**: [https://tools.tavardt.com/pt/](https://tools.tavardt.com/pt/)
 - **Contacto Técnico**: [https://ag.tavardt.com/pt/contato/](https://ag.tavardt.com/pt/contato/)
 
 ---
