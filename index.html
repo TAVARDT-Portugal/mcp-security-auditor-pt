@@ -519,13 +519,15 @@
     width: 100%;
     box-sizing: border-box;
   }
-  .aeo-badge {
+  .aeo-badge, #aeo-badge {
     font-size: 0.75rem;
     font-weight: 800;
-    color: var(--accent, #1e00ff);
+    color: #839bc8 !important;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
+    display: block;
   }
   .aeo-title {
     font-size: 1.4rem;
@@ -1233,13 +1235,15 @@ footer a:hover,
     width: 100%;
     box-sizing: border-box;
   }
-  .aeo-badge {
+  .aeo-badge, #aeo-badge {
     font-size: 0.75rem;
     font-weight: 800;
-    color: var(--accent, #1e00ff);
+    color: #839bc8 !important;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
+    display: block;
   }
   .aeo-title {
     font-size: 1.4rem;
@@ -1442,13 +1446,15 @@ footer > div:first-child {
     width: 100%;
     box-sizing: border-box;
   }
-  .aeo-badge {
+  .aeo-badge, #aeo-badge {
     font-size: 0.75rem;
     font-weight: 800;
-    color: var(--accent, #1e00ff);
+    color: #839bc8 !important;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
+    display: block;
   }
   .aeo-title {
     font-size: 1.4rem;
@@ -1705,7 +1711,7 @@ footer > div:first-child {
 
 
     <section class="aeo-section">
-      <div class="aeo-badge">PADRÃO DE SEGURANÇA DEFENSIVA PARA PROTOCOLO MCP</div>
+      <div class="aeo-badge" id="aeo-badge">PADRÃO DE SEGURANÇA DEFENSIVA PARA PROTOCOLO MCP</div>
       <h2 class="aeo-title">O que é o Risco de Escalada de Privilégios e Injeção de Ferramentas no Protocolo MCP?</h2>
       <div class="aeo-content">
         <p>O Model Context Protocol (MCP) conecta modelos de linguagem a ferramentas, bancos de dados e APIs do sistema operacional. O risco de escalada de privilégios e injeção de ferramentas ocorre quando agentes de IA recebem esquemas de funções excessivamente permissivos ou quando entradas não sanitizadas manipulam os argumentos de execução de comandos em servidores MCP locais ou remotos.</p>
