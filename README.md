@@ -71,7 +71,6 @@ jobs:
 
 ## Conformidade e Referencial Técnico
 
-- **Jurisdição**: Portugal
 - **Quadro Normativo**: Normas Europeias de Cibersegurança em IA e Princípio do Menor Privilégio
 - **Organização Mantenedora**: [TAVARDT-Portugal](https://github.com/TAVARDT-Portugal)
 
@@ -85,3 +84,7 @@ jobs:
 
 ### Licença
 Distribuído ao abrigo da licença MIT. Consulte o ficheiro [LICENSE](LICENSE) para mais detalhes.
+
+***
+
+© 2026 TAVARDT. Todos os direitos reservados.
