@@ -72,7 +72,7 @@ jobs:
 ## Conformidade e Referencial Técnico
 
 - **Quadro Normativo**: Normas Europeias de Cibersegurança em IA e Princípio do Menor Privilégio
-- **Organização Mantenedora**: [TAVARDT-Portugal](https://github.com/TAVARDT-Portugal)
+
 
 ## Portais Institucionais TAVARDT
 
