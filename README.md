@@ -1,90 +1,58 @@
-# Auditor de Segurança para Servidores e Ferramentas MCP
+# Auditor de Segurança para Model Context Protocol (MCP)
 
-[![Live Demo](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-06b6d4?style=for-the-badge)](https://tavardt-portugal.github.io/mcp-security-auditor-pt/)
-[![Standard](https://img.shields.io/badge/Standard-EU%20Cybersecurity-3b82f6?style=for-the-badge)](https://tavardt-portugal.github.io/mcp-security-auditor-pt/)
-[![Privacy](https://img.shields.io/badge/Privacy-100%25%20Client-Side-10b981?style=for-the-badge)](https://tavardt-portugal.github.io/mcp-security-auditor-pt/)
-[![License](https://img.shields.io/badge/License-MIT-slate?style=for-the-badge)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-5b3cf5.svg)](https://tavardt-portugal.github.io/mcp-security-auditor-pt/)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![MCP Spec](https://img.shields.io/badge/MCP-Protocol%20Spec-blue.svg)](https://modelcontextprotocol.io/)
+[![Zero Trust](https://img.shields.io/badge/Architecture-Zero%20Trust-green.svg)](https://ag.tavardt.com/pt/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Auditor e verificador de segurança para servidores e manifestos MCP (Model Context Protocol). Aplicação web no navegador e CLI.
+**Inspeção de Servidores e Clientes MCP, Validação de Permissões de Ferramentas e Isolamento de Recursos Críticos**
 
-Desenvolvido para organizações e equipas técnicas em **Portugal**, este repositório disponibiliza uma solução completa para a auditoria de configurações e manifestos do **Model Context Protocol (MCP)**, prevenindo incidentes de segurança em agentes autónomos de Inteligência Artificial.
+Desenvolvido e mantido pela divisão de cibersegurança e arquitetura de agentes autónomos da TAVARDT Portugal.
 
 ***
 
-## Modos de Operação
+## Portais e Demonstração Online
 
-### 1. Aplicação Web no Navegador (GitHub Pages)
-Utilize a aplicação interativa diretamente a partir do navegador:
-- **Ligação Oficial**: [https://tavardt-portugal.github.io/mcp-security-auditor-pt/](https://tavardt-portugal.github.io/mcp-security-auditor-pt/)
-- **Privacidade Absoluta**: Processamento 100% estático no motor JavaScript do navegador. Nenhuma informação ou credencial é enviada para servidores remotos.
+Aceda à ferramenta interativa oficial e aos canais soberanos da TAVARDT:
 
-### 2. Utilitário de Linha de Comandos (CLI)
-Para integração em fluxos de validação contínua (CI/CD) ou utilização local no terminal:
+* **Aplicação Web Oficial no GitHub Pages**: [https://tavardt-portugal.github.io/mcp-security-auditor-pt/](https://tavardt-portugal.github.io/mcp-security-auditor-pt/)
+* **Portal Institucional**: [https://ag.tavardt.com/pt/](https://ag.tavardt.com/pt/)
+* **Central de Ferramentas**: [https://tools.tavardt.com/pt/](https://tools.tavardt.com/pt/)
+
+***
+
+## Blueprints Técnicos e Recursos Disponíveis
+
+1. **Aplicação Web Interativa**: Diagnóstico determinístico, cálculo de postura defensiva e recomendações imediatas no navegador.
+2. **Utilitário CLI Local**: Script Python determinístico executado diretamente no ambiente de produção para auditoria offline.
+3. **Especificações de Segurança**: Manifestos e configurações de hardening em conformidade com as normas internacionais.
+
+***
+
+## Uso do Utilitário CLI Determinístico
+
+Para executar a inspeção técnica no ambiente local:
 
 ```bash
-# Execução básica sobre o ficheiro de configuração
-python mcp_security_scanner.py -file mcp.json
-
-# Modo rigoroso para controlo de qualidade (retorna código 1 perante qualquer vulnerabilidade)
-python mcp_security_scanner.py -file mcp.json -strict
-
-# Geração automática de configuração corrigida e blindada (Hardened)
-python mcp_security_scanner.py -file mcp.json -harden mcp-hardened.json
-
-# Exportação do relatório estruturado em JSON
-python mcp_security_scanner.py -file mcp.json -json
+git clone https://github.com/TAVARDT-Portugal/mcp-security-auditor-pt.git
+cd mcp-security-auditor-pt
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python3 scanner.py -json
 ```
 
 ***
 
-## Vetores de Segurança Auditados
+## Governança e Conformidade
 
-1. **Permissões de Sistema de Ficheiros**: Verificação de acessos indevidos a pastas raiz (`/`, `C:\`) ou diretórios protegidos (`/etc`, `~/.ssh`).
-2. **Execução Arbitrária de Comandos**: Bloqueio de interpretadores de terminal sem isolamento (`bash`, `sh`, `powershell`, `cmd`) e remoção de parâmetros de execução dinâmica.
-3. **Proteção de Credenciais**: Inspeção de segredos expostos (chaves de API, palavras-passe e ligações de bases de dados).
-4. **Segurança da Cadeia de Fornecimento**: Confirmação de imutabilidade e fixação estrita de versões em pacotes distribuídos via `npx` ou `uvx`.
-5. **Mitigação de SSRF**: Deteção de tentativas de ligação a interfaces locais e serviços internos protegidos.
+* **Organização**: TAVARDT-Portugal
+* **Jurisdição**: Portugal
+* **Padrões de Referência**: Normas e frameworks técnicos auditados em estrita observância das regras de soberania.
 
-***
-
-## Integração em GitHub Actions
-
-```yaml
-name: MCP Security Gate
-on: [push, pull_request]
-
-jobs:
-  audit-mcp:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Configurar Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Executar Auditoria MCP
-        run: |
-          python mcp_security_scanner.py -file config/mcp.json -strict
-```
+Desenvolvido pela Divisão de Cibersegurança e Infraestrutura da TAVARDT Portugal. Todos os direitos reservados.
 
 ***
 
-## Conformidade e Referencial Técnico
-
-- **Quadro Normativo**: Normas Europeias de Cibersegurança em IA e Princípio do Menor Privilégio
-
-
-## Portais Institucionais TAVARDT
-
-- **Portal Principal**: [Portal Institucional](https://ag.tavardt.com/pt/)
-- **Central de Ferramentas**: [Central de Ferramentas](https://tools.tavardt.com/pt/)
-- **Contacto Técnico**: [https://ag.tavardt.com/pt/contato/](https://ag.tavardt.com/pt/contato/)
-
-***
-
-### Licença
-Distribuído ao abrigo da licença MIT. Consulte o ficheiro [LICENSE](LICENSE) para mais detalhes.
-
-***
-
-© 2026 TAVARDT. Todos os direitos reservados.
+© 2026 TAVARDT Portugal. Todos os direitos reservados. Soberania e Defesa de Infraestrutura.
