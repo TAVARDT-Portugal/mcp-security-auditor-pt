@@ -212,10 +212,10 @@ def main():
     parser = argparse.ArgumentParser(
         description="Auditor de Segurança para Ficheiros de Configuração MCP (Model Context Protocol)."
     )
-    parser.add_argument("--file", "-f", required=True, help="Caminho para o ficheiro mcp.json ou configuração do cliente de inteligência artificial")
-    parser.add_argument("--strict", action="store_true", help="Modo estrito: terminar com código de saída 1 se qualquer inconformidade for detetada")
-    parser.add_argument("--harden", "-o", help="Exportar ficheiro JSON com configuração corrigida e blindada")
-    parser.add_argument("--json", action="store_true", help="Apresentar saída em formato JSON estruturado")
+    parser.add_argument("-file", "--file", "-f", required=True, help="Caminho para o ficheiro mcp.json ou configuração do cliente de inteligência artificial")
+    parser.add_argument("-strict", "--strict", action="store_true", help="Modo estrito: terminar com código de saída 1 se qualquer inconformidade for detetada")
+    parser.add_argument("-harden", "--harden", "-o", help="Exportar ficheiro JSON com configuração corrigida e blindada")
+    parser.add_argument("-json", "--json", action="store_true", help="Apresentar saída em formato JSON estruturado")
 
     args = parser.parse_args()
 
