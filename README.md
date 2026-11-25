@@ -52,7 +52,7 @@ python3 mcp_security_scanner.py -file mcp.json -json
 ***
 
 ### Licença
-Distribuído sob a Licença MIT. Consulte o ficheiro [LICENSE](LICENSE) para obter detalhes completos.
+Distribuído sob a Licença MIT.
 
 ***
 
